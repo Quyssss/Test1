@@ -1,0 +1,103 @@
+import random
+while True:
+    print("các chế độ: ")
+    print('1: Sao mà win được ?',"2: Game là dễ ","3: kiếp đỏ đen","4: trò chơi 2 người :> ")
+    x = int(input('chọn 1, 2, 3, 4 lần lượt để chọn chế độ: '))
+    if x == 1:
+        while True:
+            p1 = input ( "Chọn kéo búa hay bao: " )
+            if p1 == "kéo":
+                print ( 'Computer: Búa' )
+                print ( 'Máy Win' )
+            if p1 == "búa":
+                print ( 'Computer: Bao' )
+                print ( 'Máy Win' )
+            if p1 == "bao":
+                print ( 'Computer: Kéo' )
+                print ( "máy Win" )
+            z = input ( 'có muốn chơi lại hong (có/hong): ' )
+
+            if z != "có":
+                break
+        print("Alright!")
+    if x== 2:
+        while True:
+            p1 = input ( "Chọn kéo búa hay bao: " )
+            if p1 == "kéo":
+                print ( 'Computer: Bao' )
+                print ( 'P1 Win' )
+            if p1 == "búa":
+                print ( 'Computer: Kép' )
+                print ( 'P1 Win' )
+            if p1 == "bao":
+                print ( 'Computer: Búa' )
+                print ( "P1 Win" )
+            z = input ( 'có muốn chơi lại hong (có/hong): ' )
+
+            if z != "có":
+                break
+        print("Alright!")
+    if x ==3:
+        while True:
+            computer = ['kéo',"búa","bao"]
+            print("funny game!")
+            x = random.choice(computer)
+            y =None
+            while y not in computer:
+                y = input("kéo, búa hay bao ?  ").lower()
+            print("computer :",x)
+            print("people : ",y)
+            if x == y :
+                print("hoà !")
+            elif x =="kéo":
+                if y == "bao":
+                    print("computer win!")
+                if y== "búa":
+                    print("You Win!")
+
+            elif x == "búa":
+                if y== "kéo":
+                    print("Computer win!")
+                if y== "bao":
+                    print("You win")
+
+            elif x== "bao":
+                if y== "búa ":
+                    print("Computer Win")
+                if y== "kéo":
+                    print("You Win")
+            h = input('có muốn chơi lại hong? (có/không) ').lower()
+            if h != "có":
+                break
+        print('oke luôn!! ')
+    if x == 4:
+            while True:
+                p1 = input ( "P1: kéo búa hay bao ? " )
+                p2 = input ( 'P2: kéo búa hay bao ? ' )
+                if p1 == p2:
+                    print ( 'TIE!!' )
+                elif p1 == "kéo":
+                    if p2 == "bao":
+                        print ( "P1 Win" )
+                    else:
+                        print ( "P2 Win " )
+                elif p1 == "bao":
+                    if p2 == "kéo":
+                        print ( "P2 Win " )
+                    else:
+                        print ( "P1 Win" )
+                elif p1 == "búa":
+                    if p2 == "kéo":
+                        print ( "P1 Win" )
+                    else:
+                        print ( "P2 Win" )
+
+                z = input ( 'có muốn chơi lại k ? ' )
+                if z != "có":
+                    break
+            print ( "alright!" )
+            break
+
+
+
+
